@@ -44,7 +44,7 @@ void testWithCustomDeleter() {
     delete unit;
   };
 
-  std::shared_ptr<Unit> soldier1(new Soldier{0, 0}, reportAndDelete);
+  const std::shared_ptr<Unit> soldier1(new Soldier{0, 0}, reportAndDelete);
   soldier1->attack();
 
   std::shared_ptr<Unit> soldier2(new Soldier{0, 0}, reportAndDelete);

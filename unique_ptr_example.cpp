@@ -10,7 +10,7 @@ const size_t max_units = 1'000'000;
 
 std::unique_ptr<Unit> make_unit_and_select(Selection &selection) {
   // auto == std::unique_ptr<Soldier>
-  auto soldier = std::make_unique<Soldier>(0, 0);
+  auto soldier = std::make_unique<Soldier>(0, 0);  // why not "new Solder"?
   selection.set(soldier.get());
 
   // try const auto soldier = ...
